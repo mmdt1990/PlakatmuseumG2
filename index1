@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Plakatmuseum</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- WEBFONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Cambay" rel="stylesheet">
+
+    <!--    CSS-->
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--------- our very own stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.png" id="logo"></a>
+        <nav class="menu">
+            <button class="accordion"><img src="images/menu.png"></button>
+            <div class="panel">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="plakater.html">Plakater</a></li>
+                <li><a href="favoritter.html">Favoritter</a></li>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="tekst">
+            Scan din QR kode herunder:
+        </h1>
+        <img src="images/scanning.jpg" id="QR">
+    </main>
+
+    <footer>
+        <p class="adress">Adresse: Viborgvej 2 <br> 8000 Aarhus C </p>
+        <div>
+            <a href="https://www.facebook.com/DanskPlakatmuseum/?fref=ts"><img src="images/fb.png" class="some fb"></a>
+        </div>
+        <div>
+            <a href="https://www.instagram.com/?hl=da"><img src="images/insta.png" class="some insta"></a>
+        </div>
+        <div>
+            <a href="https://www.tripadvisor.dk/"><img src="images/trip.png" class="some trip"></a>
+        </div>
+    </footer>
+
+
+    <!--Her er jQuery :)-->
+    <script type="text/javascript" src="JS/jquery-3.3.1.js"></script>
+
+    <!--    Her er min egen JS :)-->
+    <script type="text/javascript" src="JS/script.js"></script>
+    <!-- End of Document  -------------------------->
+</body>
+
+</html>
