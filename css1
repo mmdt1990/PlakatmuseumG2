@@ -1,0 +1,183 @@
+/* styleshiiit*/
+
+body {
+    width: 100%;
+    background-color: white;
+    font-family: 'Cambay', sans-serif;
+    display: grid;
+    grid-template-columns: 32% 25% 25% 32%;
+    grid-template-rows: 150px 500px auto;
+}
+
+header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 32% 25% 25% 32%;
+    grid-template-rows: 100px auto;
+    grid-gap: 5px;
+}
+
+#logo {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    height: 100%;
+    min-width: 280px;
+}
+
+.arrow {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 15%;
+    height: 50px;
+}
+
+.h1 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 600;
+}
+
+/*------------------------------------------------------ Menubar --------------------------------*/
+
+.menu {
+    grid-column: 1/5;
+    grid-row: 2/3;
+}
+
+.accordion img {
+    width: 10%;
+    margin-top: -4%;
+}
+
+.accordion {
+    background-color: #d1ccbe;
+    color: #444;
+    cursor: pointer;
+    padding: 4.5%;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.9s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.active,
+.accordion:hover {
+    background-color: #d1ccbe;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+
+.panel {
+    padding: 0 18px;
+    background-color: #d1ccbe;
+    display: none;
+    overflow: hidden;
+    color: black;
+}
+
+.panel li a {
+    text-decoration: none;
+    color: black;
+}
+
+.panel li {
+    padding-top: -15%;
+    list-style-type: none;
+    line-height: 2.2em;
+}
+
+/*------------------------------------------------------------------- Main ------------------------------*/
+
+main {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.tekst {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+main #QR {
+    max-width: 100%;
+    padding: 0% 10%
+}
+
+/*---------------------------------------------- Plakatside*/
+
+.title {
+    z-index: 2;
+    margin-top: -70px;
+}
+
+.plakat {
+    height: 60%;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.9;
+    padding: 70px 20%;
+    padding-top: 165px;
+}
+
+.speaker {
+    height: 35%;
+    width: 30%;
+    z-index: 2;
+    opacity: 1;
+    padding: 50px 40%;
+}
+
+/*------------------------------------------------------------------- Footer --------------------------------- */
+
+footer {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    width: 100%;
+    background-color: darkred;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.adress {
+    padding-top: 20px;
+    color: white;
+    width: 38%;
+    font-size: 0.8em;
+}
+
+.some {
+    padding-top: 20px;
+    width: 28px;
+    height: 30px;
+    opacity: 0.7;
+}
+
+.some:hover {
+    opacity: 1;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+/*----------------------------------------------------------------- Media queries ------------------------- */
+
+/*Mobilstørrelse*/
+
+@media screen and (max-width:400px) {
+
+    #logo {
+        display: grid;
+        grid-column: 1/5;
+        grid-row: 1/2;
+        max-width: 100%;
+    }
+}
