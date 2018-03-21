@@ -1,18 +1,27 @@
-/* styleshiiit*/
+/* styleshiiit for gruppe 2! */
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Overordnet
+- Menubar
+- Main
+    - Plakatsiden 
+    - Favoritter
+- Footer
+- Media Queries
+*/
 
 body {
     background-color: white;
     font-family: 'Cambay', sans-serif;
 }
 
-header {}
-
 #logo {
     max-width: 100%;
 }
 
 .arrow {
-    margin: 28%;
+    margin: 25%;
     height: 40px;
 }
 
@@ -22,7 +31,7 @@ header {}
     font-weight: 600;
 }
 
-/*------------------------------------------------------ Menubar --------------------------------*/
+/*---------------------------------------------------------------------------------- Menubar --------------------------------*/
 
 .accordion img {
     width: 10%;
@@ -69,7 +78,7 @@ header {}
     line-height: 2.2em;
 }
 
-/*------------------------------------------------------------------- Main ------------------------------*/
+/*------------------------------------------------------------------------------------- Main ------------------------------*/
 
 main {
     display: flex;
@@ -89,9 +98,10 @@ main #QR {
     z-index: 1;
 }
 
-/*---------------------------------------------- Plakatside*/
+/*--------------------------------------------------------------------------------------------- Plakatside*/
 
 .top {
+    min-width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -143,11 +153,115 @@ main #QR {
     margin: 5%;
 }
 
+/*-------------------------------------------------------------------------------------- Favoritter*/
+
+#Wrapper {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    height: 50%;
+    justify-content: center;
+    min-width: 100%;
+}
+
+#Slideshow {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#Slider {
+    height: 400px;
+    overflow: hidden;
+    width: 60%;
+}
+
+#Slider img {
+    height: 400px;
+    width: 100%;
+    transition: all 1s;
+}
+
+#Arrows {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    position: absolute;
+    width: 90%;
+}
+
+#Arrows a {
+    background-color: rgba(255, 255, 255, .25);
+    color: #1C1D21;
+    cursor: pointer;
+    height: 50px;
+    padding: 15px;
+    text-decoration: none;
+    transition: background-color .5s, color .5s;
+}
+
+#Arrows a:first-of-type {
+    padding-right: 20px;
+}
+
+#Arrows a:last-of-type {
+    padding-left: 20px;
+}
+
+#Arrows a:hover {
+    background-color: rgba(28, 29, 33, .75);
+    color: #EEEFF7;
+}
+
+#MeLink {
+    background-color: rgba(255, 255, 255, 0);
+    border: 10px solid #1C1D21;
+    border-radius: 80px;
+    bottom: 20px;
+    height: 80px;
+    overflow: hidden;
+    position: fixed;
+    right: 20px;
+    width: 80px;
+    z-index: 2;
+    transition: background-color .5s;
+}
+
+#MeLink:hover {
+    background-color: rgba(255, 255, 255, .25);
+}
+
+#Me {
+    border: 10px solid #1C1D21;
+    border-radius: 80px;
+    bottom: 20px;
+    height: 80px;
+    position: fixed;
+    right: 20px;
+    width: 80px;
+    z-index: 1;
+}
+
+
 /*------------------------------------------------------------------- Footer --------------------------------- */
+
+.footer {
+    margin-top: 5%;
+    width: 100%;
+    background-color: #941611;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*fordi vores favorit-side ikke ville blive vist ordentligt hvis ikke denne footer fik sin egen class*/
 
 footer {
     width: 100%;
-    background-color: darkred;
+    background-color: #941611;
     min-height: 75px;
     display: flex;
     justify-content: space-around;
@@ -162,6 +276,7 @@ footer {
 
 .some {
     margin-top: 20px;
+    margin-right: 25%;
     width: 28px;
     height: 30px;
     opacity: 0.7;
@@ -179,13 +294,13 @@ footer {
 @media (min-width: 550px) {
 
     .info {
-        margin-top: 25%;
+        margin-top: 55%;
     }
 }
 
 @media (min-width: 700px) {
     .info {
-        margin-top: 45%;
+        margin-top: 60%;
         column-count: 2;
     }
 }

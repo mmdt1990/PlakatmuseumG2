@@ -22,7 +22,6 @@ for (i = 0; i < acc.length; i++) {
 
 //Audio
 
-
 function play() {
     var audio = document.getElementById('audio');
     if (audio.paused) {
@@ -31,8 +30,19 @@ function play() {
         $('#play').addClass('glyphicon-pause')
     } else {
         audio.pause();
-        audio.currentTime = 0
         $('#play').addClass('glyphicon-play-circle')
         $('#play').removeClass('glyphicon-pause')
     }
 }
+
+
+
+//Slideshow
+
+$("#Next").click(function () {
+    $("#Slider").append($("#Slider img:first-of-type"));
+});
+
+$("#Prev").click(function () {
+    $("#Slider").prepend($("#Slider img:last-of-type"));
+});
